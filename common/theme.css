@@ -1,0 +1,17 @@
+:root {
+  --color-primary: Red;
+  --color-primary-light: Red;
+  --color-secondary: Red;
+  --color-accent: Red;
+  --color-primary: Red;
+  --color-neutral-red: Red;
+  --color-primary: Red;
+  --color-whatever: Red;
+
+  --font-primary: "Libre Baskerville", serif;
+  --font-secondary: "Quicksand", sans-serif;
+}
+
+html {
+  font-family: var(--font-primary);
+}
