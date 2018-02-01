@@ -1,12 +1,11 @@
 :root {
-  --color-primary: #EB4F91;
-  --color-primary-dark: #BC4882;
-  --color-secondary: #2D7AA3;
-  --color-secondary-dark: #00355A;
-  --color-secondary-light: #00AAE3;
-  --color-accent-1: #F0F3F3;
+  --color-primary: #eb4f91;
+  --color-primary-dark: #bc4882;
+  --color-secondary: #2d7aa3;
+  --color-secondary-dark: #00355a;
+  --color-secondary-light: #00aae3;
+  --color-accent-1: #f0f3f3;
   --color-accent-2: #545252;
-
   --font-primary: "Quicksand", sans-serif;
   --font-secondary: "Libre Baskerville", serif;
 }
