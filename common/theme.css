@@ -1,15 +1,14 @@
 :root {
-  --color-primary: Red;
-  --color-primary-light: Red;
-  --color-secondary: Red;
-  --color-accent: Red;
-  --color-primary: Red;
-  --color-neutral-red: Red;
-  --color-primary: Red;
-  --color-whatever: Red;
+  --color-primary: #EB4F91;
+  --color-primary-dark: #BC4882;
+  --color-secondary: #2D7AA3;
+  --color-secondary-dark: #00355A;
+  --color-secondary-light: #00AAE3;
+  --color-accent-1: #F0F3F3;
+  --color-accent-2: #545252;
 
-  --font-primary: "Libre Baskerville", serif;
-  --font-secondary: "Quicksand", sans-serif;
+  --font-primary: "Quicksand", sans-serif;
+  --font-secondary: "Libre Baskerville", serif;
 }
 
 html {
