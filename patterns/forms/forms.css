@@ -1,0 +1,26 @@
+input,
+input[type="checkbox"] + label::before {
+  border: 2px solid var(--secondary-dark);
+}
+
+html {
+  font-family: var(--font-primary);
+}
+
+.checkbox {
+  font-family: var(--font-secondary);
+  background-color: var(--color-accent-3);
+}
+
+.textbox {
+  font-family: var(--font-secondary);
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.textbox-username {
+  font-family: var(--font-primary);
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  color: var(--color-accent-3);
+}
