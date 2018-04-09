@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library
- * @version 1523296948221
+ * @version 1523302570312
  */
-const patternManifest_1523296948221 = {
+const patternManifest_1523302570312 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -594,6 +594,7 @@ const patternManifest_1523296948221 = {
       "sizeLargeLocal": "logo.svg"
     },
     "patterns": [
+      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/banners",
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons",
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards",
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/footer",
@@ -605,6 +606,28 @@ const patternManifest_1523296948221 = {
     "pages": []
   },
   "userPatterns": [
+    {
+      "name": "banners",
+      "namePretty": "Banners",
+      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/banners",
+      "html": [
+        {
+          "name": "main-banner",
+          "namePretty": "Main banner",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/banners/main-banner.html",
+          "localPath": "patterns/banners/main-banner.html"
+        }
+      ],
+      "md": [],
+      "css": [
+        {
+          "name": "main-banner",
+          "namePretty": "Main banner",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/banners/main-banner.css",
+          "localPath": "patterns/banners/main-banner.css"
+        }
+      ]
+    },
     {
       "name": "buttons",
       "namePretty": "Buttons",
@@ -798,5 +821,5 @@ const patternManifest_1523296948221 = {
   }
 };
 
-patternBotIncludes(patternManifest_1523296948221);
+patternBotIncludes(patternManifest_1523302570312);
 }());

@@ -16,11 +16,20 @@ html {
   font-family: var(--font-secondary);
   background-color: var(--color-primary);
   border: 2px solid var(--color-primary);
+  max-width: 25%;
+  position: relative;
 }
 
 .textbox-username {
   font-family: var(--font-primary);
-  background-color: var(--color-primary);
+  background-color: var(--color-accent-4);
   border: 2px solid var(--color-primary);
-  color: var(--color-accent-3);
+  color: var(--color-accent-2);
+}
+
+.go-tab {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
