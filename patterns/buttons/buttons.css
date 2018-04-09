@@ -2,6 +2,10 @@
   padding: .3em 1em;
   background-color: var(--color-primary);
   border: 2px solid var(--color-primary);
+  transition:
+    background-color .3s,
+    border-color .3s,
+    color .3s;
 }
 
 .btn:hover {

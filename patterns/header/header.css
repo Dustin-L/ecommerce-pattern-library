@@ -1,5 +1,7 @@
 a {
   color: var(--color-accent-2);
+  transition:
+    color .3s;
 }
 
 .header {

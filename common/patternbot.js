@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library
- * @version 1523302570312
+ * @version 1523304367040
  */
-const patternManifest_1523302570312 = {
+const patternManifest_1523304367040 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -600,7 +600,6 @@ const patternManifest_1523302570312 = {
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/footer",
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms",
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/header",
-      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/navigation",
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections"
     ],
     "pages": []
@@ -771,28 +770,6 @@ const patternManifest_1523302570312 = {
       ]
     },
     {
-      "name": "navigation",
-      "namePretty": "Navigation",
-      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/navigation",
-      "html": [
-        {
-          "name": "navigation",
-          "namePretty": "Navigation",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/navigation/navigation.html",
-          "localPath": "patterns/navigation/navigation.html"
-        }
-      ],
-      "md": [],
-      "css": [
-        {
-          "name": "navigation",
-          "namePretty": "Navigation",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/navigation/navigation.css",
-          "localPath": "patterns/navigation/navigation.css"
-        }
-      ]
-    },
-    {
       "name": "sections",
       "namePretty": "Sections",
       "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections",
@@ -821,5 +798,5 @@ const patternManifest_1523302570312 = {
   }
 };
 
-patternBotIncludes(patternManifest_1523302570312);
+patternBotIncludes(patternManifest_1523304367040);
 }());

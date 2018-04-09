@@ -16,6 +16,8 @@ body {
 
 a {
   color: var(--color-accent-3);
+  transition:
+    color .3s;
 }
 
 p {
