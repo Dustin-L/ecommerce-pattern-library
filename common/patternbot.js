@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library
- * @version 1523304367040
+ * @version 1523306082362
  */
-const patternManifest_1523304367040 = {
+const patternManifest_1523306082362 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -773,9 +773,29 @@ const patternManifest_1523304367040 = {
       "name": "sections",
       "namePretty": "Sections",
       "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections",
-      "html": [],
+      "html": [
+        {
+          "name": "link-section",
+          "namePretty": "Link section",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections/link-section.html",
+          "localPath": "patterns/sections/link-section.html"
+        },
+        {
+          "name": "section",
+          "namePretty": "Section",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections/section.html",
+          "localPath": "patterns/sections/section.html"
+        }
+      ],
       "md": [],
-      "css": []
+      "css": [
+        {
+          "name": "section",
+          "namePretty": "Section",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections/section.css",
+          "localPath": "patterns/sections/section.css"
+        }
+      ]
     }
   ],
   "config": {
@@ -798,5 +818,5 @@ const patternManifest_1523304367040 = {
   }
 };
 
-patternBotIncludes(patternManifest_1523304367040);
+patternBotIncludes(patternManifest_1523306082362);
 }());

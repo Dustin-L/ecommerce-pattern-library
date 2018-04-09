@@ -1,0 +1,15 @@
+html {
+  background-color: var(--color-accent-1);
+}
+
+.section {
+  width: 50%;
+}
+
+h1, p {
+  color: var(--color-accent-2);
+}
+
+a:hover {
+
+}
