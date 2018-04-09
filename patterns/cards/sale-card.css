@@ -47,7 +47,14 @@ h2 {
   color: var(--color-accent-2);
 }
 
-div {
-  color: #fff;
-  background-color: #fff;
+h3 {
+  color: var(--color-accent-2);
+}
+
+.sale-tab {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-accent-4);
 }

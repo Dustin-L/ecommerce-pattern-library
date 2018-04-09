@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library
- * @version 1523294401081
+ * @version 1523296948221
  */
-const patternManifest_1523294401081 = {
+const patternManifest_1523296948221 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -488,6 +488,13 @@ const patternManifest_1523294401081 = {
             "raw": "#fff",
             "hex": "#fff",
             "rgba": "rgba(255, 255, 255, 1)"
+          },
+          {
+            "name": "--color-accent-4",
+            "namePretty": "Accent 4",
+            "raw": "#d9d9d9",
+            "hex": "#d9d9d9",
+            "rgba": "rgba(217, 217, 217, 1)"
           }
         ]
       },
@@ -542,7 +549,8 @@ const patternManifest_1523294401081 = {
         "--color-secondary-light": "#00aae3",
         "--color-accent-1": "#f0f3f3",
         "--color-accent-2": "#545252",
-        "--color-accent-3": "#fff"
+        "--color-accent-3": "#fff",
+        "--color-accent-4": "#d9d9d9"
       },
       "fontsRaw": {
         "--font-primary": "\"Quicksand\", sans-serif",
@@ -636,6 +644,12 @@ const patternManifest_1523294401081 = {
           "namePretty": "Main card",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/main-card.html",
           "localPath": "patterns/cards/main-card.html"
+        },
+        {
+          "name": "sale-card",
+          "namePretty": "Sale card",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/sale-card.html",
+          "localPath": "patterns/cards/sale-card.html"
         }
       ],
       "md": [],
@@ -645,6 +659,12 @@ const patternManifest_1523294401081 = {
           "namePretty": "Main card",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/main-card.css",
           "localPath": "patterns/cards/main-card.css"
+        },
+        {
+          "name": "sale-card",
+          "namePretty": "Sale card",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/sale-card.css",
+          "localPath": "patterns/cards/sale-card.css"
         }
       ]
     },
@@ -652,9 +672,23 @@ const patternManifest_1523294401081 = {
       "name": "footer",
       "namePretty": "Footer",
       "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/footer",
-      "html": [],
+      "html": [
+        {
+          "name": "footer",
+          "namePretty": "Footer",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/footer/footer.html",
+          "localPath": "patterns/footer/footer.html"
+        }
+      ],
       "md": [],
-      "css": []
+      "css": [
+        {
+          "name": "footer",
+          "namePretty": "Footer",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/footer/footer.css",
+          "localPath": "patterns/footer/footer.css"
+        }
+      ]
     },
     {
       "name": "forms",
@@ -764,5 +798,5 @@ const patternManifest_1523294401081 = {
   }
 };
 
-patternBotIncludes(patternManifest_1523294401081);
+patternBotIncludes(patternManifest_1523296948221);
 }());
