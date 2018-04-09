@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library
- * @version 1519916348671
+ * @version 1523294401081
  */
-const patternManifest_1519916348671 = {
+const patternManifest_1523294401081 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -587,7 +587,12 @@ const patternManifest_1519916348671 = {
     },
     "patterns": [
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons",
-      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms"
+      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards",
+      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/footer",
+      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms",
+      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/header",
+      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/navigation",
+      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections"
     ],
     "pages": []
   },
@@ -620,6 +625,36 @@ const patternManifest_1519916348671 = {
           "localPath": "patterns/buttons/buttons.css"
         }
       ]
+    },
+    {
+      "name": "cards",
+      "namePretty": "Cards",
+      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards",
+      "html": [
+        {
+          "name": "main-card",
+          "namePretty": "Main card",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/main-card.html",
+          "localPath": "patterns/cards/main-card.html"
+        }
+      ],
+      "md": [],
+      "css": [
+        {
+          "name": "main-card",
+          "namePretty": "Main card",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/main-card.css",
+          "localPath": "patterns/cards/main-card.css"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "namePretty": "Footer",
+      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/footer",
+      "html": [],
+      "md": [],
+      "css": []
     },
     {
       "name": "forms",
@@ -655,6 +690,58 @@ const patternManifest_1519916348671 = {
           "localPath": "patterns/forms/forms.css"
         }
       ]
+    },
+    {
+      "name": "header",
+      "namePretty": "Header",
+      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/header",
+      "html": [
+        {
+          "name": "header",
+          "namePretty": "Header",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/header/header.html",
+          "localPath": "patterns/header/header.html"
+        }
+      ],
+      "md": [],
+      "css": [
+        {
+          "name": "header",
+          "namePretty": "Header",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/header/header.css",
+          "localPath": "patterns/header/header.css"
+        }
+      ]
+    },
+    {
+      "name": "navigation",
+      "namePretty": "Navigation",
+      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/navigation",
+      "html": [
+        {
+          "name": "navigation",
+          "namePretty": "Navigation",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/navigation/navigation.html",
+          "localPath": "patterns/navigation/navigation.html"
+        }
+      ],
+      "md": [],
+      "css": [
+        {
+          "name": "navigation",
+          "namePretty": "Navigation",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/navigation/navigation.css",
+          "localPath": "patterns/navigation/navigation.css"
+        }
+      ]
+    },
+    {
+      "name": "sections",
+      "namePretty": "Sections",
+      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections",
+      "html": [],
+      "md": [],
+      "css": []
     }
   ],
   "config": {
@@ -677,5 +764,5 @@ const patternManifest_1519916348671 = {
   }
 };
 
-patternBotIncludes(patternManifest_1519916348671);
+patternBotIncludes(patternManifest_1523294401081);
 }());
