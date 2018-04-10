@@ -1028,7 +1028,7 @@
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-              <code><pre id="cards-sale-card-code-sample-copy-chunk">&lt;div class="unit"&gt;
+              <code><pre id="cards-sale-card-code-sample-copy-chunk">&lt;div&gt;
 
   &lt;a class="hover-box" href="#">
       &lt;img src="../../images/item-02.jpg" alt="" class="img-flex">
@@ -1138,6 +1138,7 @@
       <nav class="pattern-nav">
         <ol class="list-group-inline push-1-4 pad-b-1-4">
             <li><a href="#forms--checkbox">Checkbox</a></li>
+            <li><a href="#forms--contact-form">Contact form</a></li>
             <li><a href="#forms--textbox">Textbox</a></li>
         </ol>
       </nav>
@@ -1218,6 +1219,105 @@
 &lt;div class="pad-t-1-2 push-r">
   &lt;input type="checkbox" id="cancel">
   &lt;label for="cancel">Cancel&lt;/label>
+&lt;/div>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="pattern-details " id="forms--contact-form" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Contact form</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="forms-contact-form-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="forms/contact-form" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/forms/contact-form.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
+
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/forms/contact-form.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="forms-contact-form-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#forms-contact-form-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="forms-contact-form-code-sample-copy-chunk">&lt;div class="form-vertical"&gt;
+
+  &lt;form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="contact-form">
+    &lt;input type="hidden" name="form_type" value="contact">
+    &lt;input type="hidden" name="utf8" value="&#x2713;">
+
+    &lt;h3 class="simple-title">Write us a message&lt;/h3>
+
+    &lt;div class="simple-grid">
+
+      &lt;div class="grid__item portable--one-whole palm--one-whole">
+
+        &lt;label for="ContactFormName" class="hidden-label">Name&lt;/label>
+        &lt;input type="text" id="ContactFormName" class="input-full" name="contact[name]" placeholder="Name" autocapitalize="words" value="">
+      &lt;/div>
+
+      &lt;div class="grid__item one-half portable--one-whole palm--one-whole">
+        &lt;label for="ContactFormEmail" class="hidden-label">Email&lt;/label>
+        &lt;input type="email" id="ContactFormEmail" class="input-full" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" value="">
+      &lt;/div>
+
+      &lt;div class="grid__item one-half portable--one-whole palm--one-whole">
+
+        &lt;label for="ContactFormPhone" class="hidden-label">Phone&lt;/label>
+        &lt;input type="tel" id="ContactFormPhone" class="input-full" name="contact[tel]" placeholder="Phone" pattern="[0-9\-]*" value="">
+      &lt;/div>
+
+      &lt;div class="grid__item">
+        &lt;label for="ContactFormMessage" class="hidden-label">Message&lt;/label>
+        &lt;textarea rows="10" id="ContactFormMessage" class="input-full" name="contact[body]" placeholder="Message">&lt;/textarea>
+      &lt;/div>
+
+      &lt;input type="submit" class="btn right" value="Send" style="margin-left:15px;margin-top:-10px;">
+
+    &lt;/div>
+
+  &lt;/form>
+
 &lt;/div>
 </pre></code>
             </div>

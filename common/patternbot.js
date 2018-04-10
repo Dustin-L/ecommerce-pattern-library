@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library
- * @version 1523306082362
+ * @version 1523375014940
  */
-const patternManifest_1523306082362 = {
+const patternManifest_1523375014940 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -724,6 +724,12 @@ const patternManifest_1523306082362 = {
           "localPath": "patterns/forms/checkbox.html"
         },
         {
+          "name": "contact-form",
+          "namePretty": "Contact form",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/contact-form.html",
+          "localPath": "patterns/forms/contact-form.html"
+        },
+        {
           "name": "textbox",
           "namePretty": "Textbox",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/textbox.html",
@@ -818,5 +824,5 @@ const patternManifest_1523306082362 = {
   }
 };
 
-patternBotIncludes(patternManifest_1523306082362);
+patternBotIncludes(patternManifest_1523375014940);
 }());
