@@ -50,3 +50,12 @@ div {
   color: #fff;
   background-color: #fff;
 }
+
+.product-box {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 400px;
+  border-bottom: 1px solid var(--color-accent-4);
+  border-right: 1px solid var(--color-accent-4);
+}

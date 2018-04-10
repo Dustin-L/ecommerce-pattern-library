@@ -1,6 +1,6 @@
 input,
 input[type="checkbox"] + label::before {
-  border: 2px solid var(--secondary-dark);
+  border: 2px solid var(--color-accent-2);
 }
 
 html {
@@ -14,16 +14,11 @@ html {
 
 .textbox {
   font-family: var(--font-secondary);
-  background-color: var(--color-primary);
-  border: 2px solid var(--color-primary);
-  max-width: 25%;
   position: relative;
 }
 
 .textbox-username {
-  font-family: var(--font-primary);
-  background-color: var(--color-accent-4);
-  border: 2px solid var(--color-primary);
+  font-family: var(--color-accent-2);
   color: var(--color-accent-2);
 }
 
@@ -32,4 +27,23 @@ html {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.split {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.split input {
+  flex-grow: 1;
+  height: auto;
+}
+
+.textbox .quantity {
+  padding: 1em;
+  width: 4em;
+  text-align: center;
+  background-color: var(--color-accent-4);
 }

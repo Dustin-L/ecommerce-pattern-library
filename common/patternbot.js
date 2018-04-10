@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library
- * @version 1523375014940
+ * @version 1523385876306
  */
-const patternManifest_1523375014940 = {
+const patternManifest_1523385876306 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -637,6 +637,12 @@ const patternManifest_1523375014940 = {
           "namePretty": "Buttons",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons/buttons.html",
           "localPath": "patterns/buttons/buttons.html"
+        },
+        {
+          "name": "sale-tab",
+          "namePretty": "Sale tab",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons/sale-tab.html",
+          "localPath": "patterns/buttons/sale-tab.html"
         }
       ],
       "md": [
@@ -653,6 +659,12 @@ const patternManifest_1523375014940 = {
           "namePretty": "Buttons",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons/buttons.css",
           "localPath": "patterns/buttons/buttons.css"
+        },
+        {
+          "name": "sale-tab",
+          "namePretty": "Sale tab",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons/sale-tab.css",
+          "localPath": "patterns/buttons/sale-tab.css"
         }
       ]
     },
@@ -666,6 +678,12 @@ const patternManifest_1523375014940 = {
           "namePretty": "Main card",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/main-card.html",
           "localPath": "patterns/cards/main-card.html"
+        },
+        {
+          "name": "product-card",
+          "namePretty": "Product card",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/product-card.html",
+          "localPath": "patterns/cards/product-card.html"
         },
         {
           "name": "sale-card",
@@ -718,22 +736,22 @@ const patternManifest_1523375014940 = {
       "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms",
       "html": [
         {
-          "name": "checkbox",
-          "namePretty": "Checkbox",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/checkbox.html",
-          "localPath": "patterns/forms/checkbox.html"
-        },
-        {
           "name": "contact-form",
           "namePretty": "Contact form",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/contact-form.html",
           "localPath": "patterns/forms/contact-form.html"
         },
         {
-          "name": "textbox",
-          "namePretty": "Textbox",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/textbox.html",
-          "localPath": "patterns/forms/textbox.html"
+          "name": "item-quanity",
+          "namePretty": "Item quanity",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/item-quanity.html",
+          "localPath": "patterns/forms/item-quanity.html"
+        },
+        {
+          "name": "newsletter",
+          "namePretty": "Newsletter",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/newsletter.html",
+          "localPath": "patterns/forms/newsletter.html"
         }
       ],
       "md": [
@@ -787,6 +805,12 @@ const patternManifest_1523375014940 = {
           "localPath": "patterns/sections/link-section.html"
         },
         {
+          "name": "product-section",
+          "namePretty": "Product section",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections/product-section.html",
+          "localPath": "patterns/sections/product-section.html"
+        },
+        {
           "name": "section",
           "namePretty": "Section",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections/section.html",
@@ -824,5 +848,5 @@ const patternManifest_1523375014940 = {
   }
 };
 
-patternBotIncludes(patternManifest_1523375014940);
+patternBotIncludes(patternManifest_1523385876306);
 }());
