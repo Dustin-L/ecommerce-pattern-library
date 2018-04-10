@@ -8,10 +8,20 @@ h1, p {
   color: var(--color-accent-2);
 }
 
-a:hover {
+.link-section :hover {
+background-color: rgba(240, 243, 243, 0.3);
+transition:
+  background-color .6s;
 
 }
 
-h2 {
-  width: 5em;
+.underline {
+  width: 22em;
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin-top: 30px;
+  background: #2d3636;
+  box-sizing: border-box;
 }
