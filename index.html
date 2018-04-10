@@ -875,9 +875,9 @@
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-              <code><pre id="buttons-buttons-code-sample-copy-chunk">&lt;a class="btn" href="#"&gt;Standard Button&lt;/a>
-&lt;a class="btn btn-secondary" href="#">Secondary Button&lt;/a>
-&lt;a class="btn btn-ghost" href="#">Ghost Button&lt;/a>
+              <code><pre id="buttons-buttons-code-sample-copy-chunk">&lt;a class="btn pad-b pad-t island-2" href="#"&gt;Standard Button&lt;/a>
+&lt;a class="btn btn-secondary pad-b pad-t island-2" href="#">Secondary Button&lt;/a>
+&lt;a class="btn btn-ghost pad-b pad-t island-2" href="#">Ghost Button&lt;/a>
 </pre></code>
             </div>
           </div>
@@ -962,7 +962,7 @@
       &lt;section>
       &lt;span>
       &lt;h2>Paper Megaphone&lt;/h2>
-      &lt;p>$65&lt;/p>
+      &lt;p class="micro">$65&lt;/p>
     &lt;/span>
   &lt;/section>
     &lt;/a>
@@ -1032,11 +1032,11 @@
 
   &lt;a class="hover-box" href="#">
       &lt;img src="../../images/item-02.jpg" alt="" class="img-flex">
-      &lt;h3 class="kilo sale-tab island-1-4 gutter-1-2">SALE&lt;/h3>
+      &lt;h3 class="kilo bold sale-tab island-1-4 gutter-1-2">SALE&lt;/h3>
       &lt;section>
-      &lt;span>
+      &lt;span class="info">
       &lt;h2>Crazy Radio&lt;/h2>
-      &lt;p>$223 $300&lt;/p>
+      &lt;p class="micro">$223 &lt;span class="strike italic">$300&lt;/span>&lt;/p>
     &lt;/span>
   &lt;/section>
     &lt;/a>
@@ -1379,12 +1379,10 @@
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-              <code><pre id="forms-textbox-code-sample-copy-chunk">&lt;h1&gt;Profile.&lt;/h1>
+              <code><pre id="forms-textbox-code-sample-copy-chunk">&lt;h1&gt;Newsletter&lt;/h1>
 
-&lt;div class="push-0 textbox-username textbox">
-  &lt;label class="textbox-username" for="username">Userame&lt;/label>
-  &lt;input id="username" name="username" type="text">
-  &lt;a href="#" class "go-tab"="">SIGN UP&lt;/a>
+&lt;div class="textbox-username textbox grid__item one-half portable--one-whole palm--one-whole">
+  &lt;input type="email" id="ContactFormEmail" class="input-full" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" value="">
 &lt;/div>
 </pre></code>
             </div>
@@ -1483,6 +1481,7 @@
       <nav class="pattern-nav">
         <ol class="list-group-inline push-1-4 pad-b-1-4">
             <li><a href="#sections--link-section">Link section</a></li>
+            <li><a href="#sections--product-section">Product section</a></li>
             <li><a href="#sections--section">Section</a></li>
         </ol>
       </nav>
@@ -1547,9 +1546,72 @@
                 </i>
               </button>
               <code><pre id="sections-link-section-code-sample-copy-chunk">&lt;a href="#" class="section pin-c grid-middle wrapper island-2 unit xs-1 s-1 m-1-2 l-1-2 grid"&gt;
-  &lt;h1 class="exa pad-t-1-2 push-none tena">Our Spring Sale!&lt;/h1>
+  &lt;h1 class="exa bold pad-t-1-2 push-none tena">Our Spring Sale!&lt;/h1>
   &lt;p class="kilo pad-t-1-2 giga">Take advantage of our sales!&lt;/p>
 &lt;/a>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="pattern-details " id="sections--product-section" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Product section</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="sections-product-section-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="sections/product-section" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/sections/product-section.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
+
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/sections/product-section.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="sections-product-section-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#sections-product-section-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="sections-product-section-code-sample-copy-chunk">&lt;div class="section product-section pin-c grid-middle wrapper island-2 unit xs-1 s-1 m-1-2 l-1-2 grid"&gt;
+  &lt;h1 class="exa bold pad-t-1-2 push-none tena">You may also like&lt;/h1>
+&lt;/div>
 </pre></code>
             </div>
           </div>
@@ -1611,7 +1673,7 @@
                 </i>
               </button>
               <code><pre id="sections-section-code-sample-copy-chunk">&lt;div class="section pin-c grid-middle wrapper island-2 unit xs-1 s-1 m-1-2 l-1-2 grid"&gt;
-  &lt;h1 class="exa pad-t-1-2 push-none tena">Featured Product This Week!&lt;/h1>
+  &lt;h1 class="exa bold pad-t-1-2 push-none tena">Featured Product This Week!&lt;/h1>
   &lt;p class="kilo pad-t-1-2 giga">Colorful and Bold, By Eric Smith.&lt;/p>
 &lt;/div>
 </pre></code>

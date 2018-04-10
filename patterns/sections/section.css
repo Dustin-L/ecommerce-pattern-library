@@ -1,9 +1,7 @@
-html {
-  background-color: var(--color-accent-1);
-}
+
 
 .section {
-  width: 50%;
+  background-color: var(--color-accent-1);
 }
 
 h1, p {

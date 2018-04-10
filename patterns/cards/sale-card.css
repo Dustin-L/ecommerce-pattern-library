@@ -2,6 +2,9 @@
   display: block;
   overflow: hidden;
   position: relative;
+  width: 400px;
+  border-bottom: 1px solid var(--color-accent-4);
+  border-right: 1px solid var(--color-accent-4);
 }
 
 .hover-box img {
@@ -26,13 +29,14 @@
   text-align: center;
   transform: scale(0);
   transition: all 200ms ease-out;
-  background-color: #fff;
+  background-color: rgba(240, 243, 243, 0.8);
 }
+
 .hover-box:hover section {
   transform: scale(1);
 }
 
-.hover-box span {
+.hover-box .info {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -47,10 +51,20 @@ h3 {
   color: var(--color-accent-2);
 }
 
+p {
+  color: var(--color-primary);
+}
+
+
 .sale-tab {
   z-index: 99;
   position: absolute;
   top: 0;
   left: 0;
   background-color: var(--color-accent-4);
+}
+
+.strike {
+  color: rgba(84, 82, 82, 0.8);
+  text-decoration: line-through;
 }
