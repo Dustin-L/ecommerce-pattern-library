@@ -1,4 +1,4 @@
-.hover-box {
+ .hover-box {
   display: block;
   overflow: hidden;
   position: relative;
@@ -24,16 +24,15 @@
 
 .hover-box section {
   position: absolute;
-  top: 0px;
+  top: 20em;
   bottom: 0px;
   left: 0px;
   right: 0px;
   margin: 0;
   color: var(--color-accent-2);
   text-align: center;
-  transform: scale(0);
+  transform: scale(1);
   transition: all 200ms ease-out;
-  background-color: rgba(240, 243, 243, 0.8);
 }
 .hover-box:hover section {
   transform: scale(1);
@@ -48,6 +47,7 @@
 
 h2 {
   color: var(--color-accent-2);
+  margin: 0;
 }
 
 div {
@@ -77,7 +77,85 @@ div {
   border-bottom: 1px solid var(--color-accent-4);
 }
 
-@media only screen and (min-width: 38em) {
+@media only screen and (min-width: 60em) {
 
+  .hover-box {
+   display: block;
+   overflow: hidden;
+   position: relative;
+   max-width: 400px;
+   border-bottom: 1px solid var(--color-accent-4);
+   border-right: 1px solid var(--color-accent-4);
+   width: 100%;
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+ }
+
+ .hover-box img {
+   display: block;
+   width: 100%;
+   transform: scale(1.2);
+   transition: all 200ms ease-out;
+ }
+
+ .hover-box:hover img {
+   transform: scale(1);
+ }
+
+ .hover-box section {
+   position: absolute;
+   top: 0px;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   margin: 0;
+   color: var(--color-accent-2);
+   text-align: center;
+   transform: scale(0);
+   transition: all 200ms ease-out;
+   background-color: rgba(240, 243, 243, 0.8);
+ }
+ .hover-box:hover section {
+   transform: scale(1);
+ }
+
+ .hover-box span {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
+
+ h2 {
+   color: var(--color-accent-2);
+ }
+
+ div {
+   color: #fff;
+   background-color: #fff;
+ }
+
+ .product-box {
+   display: block;
+   overflow: hidden;
+   position: relative;
+   align-items: center;
+   width: 100%;
+   max-width: 400px;
+   border-bottom: 1px solid var(--color-accent-4);
+   border-right: 1px solid var(--color-accent-4);
+ }
+
+ }
+
+ .banner {
+   width: 100%;
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+   max-height: 800px;
+   border-bottom: 1px solid var(--color-accent-4);
+ } */
 
 }
