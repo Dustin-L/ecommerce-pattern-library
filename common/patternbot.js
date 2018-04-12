@@ -86,11 +86,17 @@ const patternBotIncludes = function (manifest) {
     `},
   };
 
+  let jsFileQueue = {
+    sync: [],
+    async: [],
+  };
   let downloadedAssets = {};
 
   const downloadHandler = function (e) {
+    const id = (e.target.hasAttribute('src')) ? e.target.getAttribute('src') : e.target.getAttribute('href');
+
     e.target.removeEventListener('load', downloadHandler);
-    downloadedAssets[e.target.getAttribute('href')] = true;
+    downloadedAssets[id] = true;
   };
 
   const findRootPath = function () {
@@ -101,7 +107,6 @@ const patternBotIncludes = function (manifest) {
     for (i = 0; i < t; i++) {
       if (rootMatcher.test(allScripts[i].src)) {
         return allScripts[i].src.split(rootMatcher)[0];
-        break;
       }
     }
   };
@@ -116,7 +121,7 @@ const patternBotIncludes = function (manifest) {
     newLink.addEventListener('load', downloadHandler);
 
     document.head.appendChild(newLink);
-  }
+  };
 
   const bindAllCssFiles = function (rootPath) {
     if (manifest.commonInfo && manifest.commonInfo.readme && manifest.commonInfo.readme.attributes &&  manifest.commonInfo.readme.attributes.fontUrl) {
@@ -139,11 +144,59 @@ const patternBotIncludes = function (manifest) {
     });
   };
 
+  const queueAllJsFiles = function (rootPath) {
+    if (manifest.patternLibFiles && manifest.patternLibFiles.js) {
+      manifest.patternLibFiles.js.forEach((js) => {
+        const href = `..${manifest.config.commonFolder}/${js.filename}`;
+
+        downloadedAssets[href] = false;
+        jsFileQueue.sync.push(href);
+      });
+    }
+
+    manifest.userPatterns.forEach((pattern) => {
+      if (!pattern.js) return;
+
+      pattern.js.forEach((js) => {
+        const href = `../${js.localPath}`;
+
+        downloadedAssets[href] = false;
+        jsFileQueue.async.push(href);
+      });
+    });
+  };
+
+  const addJsFile = function (href) {
+    const newScript = document.createElement('script');
+
+    newScript.setAttribute('src', href);
+    document.body.appendChild(newScript);
+
+    return newScript;
+  };
+
+  const bindNextJsFile = function (e) {
+    if (e && e.target) {
+      e.target.removeEventListener('load', bindNextJsFile);
+      downloadedAssets[e.target.getAttribute('src')] = true;
+    }
+
+    if (jsFileQueue.sync.length > 0) {
+      const scriptTag = addJsFile(jsFileQueue.sync.shift());
+      scriptTag.addEventListener('load', bindNextJsFile);
+    } else {
+      jsFileQueue.async.forEach((js) => {
+        const scriptTag = addJsFile(js);
+        scriptTag.addEventListener('load', downloadHandler);
+      });
+    }
+  };
+
   const getPatternInfo = function (patternElem) {
     let patternInfoJson;
     const data = patternElem.innerText.trim();
 
-    if (!data) return {}
+    if (!data) return {};
 
     try {
       patternInfoJson = JSON.parse(data);
@@ -172,9 +225,50 @@ const patternBotIncludes = function (manifest) {
     };
   };
 
+  const correctHrefPaths = function (html) {
+    const hrefSearch = /href\s*=\s*"\.\.\/\.\.\//g;
+    const srcSearch = /src\s*=\s*"\.\.\/\.\.\//g;
+    const urlSearch = /url\((["']*)\.\.\/\.\.\//g;
+
+    return html
+      .replace(hrefSearch, 'href="../')
+      .replace(srcSearch, 'src="../')
+      .replace(urlSearch, 'url($1../')
+    ;
+  };
+
+  const buildAccurateSelectorFromElem = function (elem) {
+    let theSelector = elem.tagName.toLowerCase();
+
+    if (elem.id) theSelector += `#${elem.id}`;
+    if (elem.getAttribute('role')) theSelector += `[role="${elem.getAttribute('role')}"]`;
+    if (elem.classList.length > 0) theSelector += `.${[].join.call(elem.classList, '.')}`;
+
+    theSelector += ':first-of-type';
+
+    return theSelector;
+  };
+
+  /**
+   * This is an ugly mess: Blink does not properly render SVGs when using DOMParser alone.
+   * But, I need DOMParser to determine the correct element to extract.
+   *
+   * I only want to get the first element within the `<body>` tag of the loaded document.
+   * This dumps the whole, messy, HTML document into a temporary `<div>`,
+   * then uses the DOMParser version, of the same element, to create an accurate selector,
+   * then finds that single element in the temporary `<div>` using the selector and returns it.
+   */
   const htmlStringToElem = function (html) {
+    let theSelector = '';
+    const tmpDoc = document.createElement('div');
+    const finalTmpDoc = document.createElement('div');
     const doc = (new DOMParser()).parseFromString(html, 'text/html');
-    return doc.body;
+
+    tmpDoc.innerHTML = html;
+    theSelector = buildAccurateSelectorFromElem(doc.body.firstElementChild);
+    finalTmpDoc.appendChild(tmpDoc.querySelector(theSelector));
+
+    return finalTmpDoc;
   };
 
   const replaceElementValue = function (elem, sel, data) {
@@ -197,7 +291,7 @@ const patternBotIncludes = function (manifest) {
 
     if (!patternDetails.html) return;
 
-    patternOutElem = htmlStringToElem(patternDetails.html);
+    patternOutElem = htmlStringToElem(correctHrefPaths(patternDetails.html));
     patternData = getPatternInfo(patternElem);
 
     Object.keys(patternData).forEach((sel) => {
@@ -234,7 +328,7 @@ const patternBotIncludes = function (manifest) {
   };
 
   const hideLoadingScreen = function () {
-    const allDownloadedInterval = setInterval(() => {
+    let allDownloadedInterval = setInterval(() => {
       if (Object.values(downloadedAssets).includes(false)) return;
 
       clearInterval(allDownloadedInterval);
@@ -272,7 +366,7 @@ const patternBotIncludes = function (manifest) {
           if (resp.status >= 200 && resp.status <= 299) {
             return resp.text();
           } else {
-            console.group('Cannot location pattern');
+            console.group('Cannot locate pattern');
             console.log(resp.url);
             console.log(`Error ${resp.status}: ${resp.statusText}`);
             console.groupEnd();
@@ -328,11 +422,13 @@ const patternBotIncludes = function (manifest) {
 
     rootPath = findRootPath();
     bindAllCssFiles(rootPath);
+    queueAllJsFiles(rootPath);
     allPatternTags = findAllPatternTags();
     allPatterns = constructAllPatterns(rootPath, allPatternTags);
 
     loadAllPatterns(allPatterns).then((allLoadedPatterns) => {
       renderAllPatterns(allPatternTags, allLoadedPatterns);
+      bindNextJsFile();
       hideLoadingScreen();
     }).catch((e) => {
       console.group('Pattern load error');
@@ -348,9 +444,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library
- * @version 1523539152082
+ * @version 6bd776e458b9c2604d39f98788b51641685e30ca
  */
-const patternManifest_1523539152082 = {
+const patternManifest_6bd776e458b9c2604d39f98788b51641685e30ca = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -566,7 +662,9 @@ const patternManifest_1523539152082 = {
           "primary": 0,
           "opposite": 255
         }
-      }
+      },
+      "bodyRaw": "\nFrom classic toys that have stood the test of time to what's trending this year, plus our own grown-up section, shop online in our unique toy store!\n",
+      "bodyBasic": "From classic toys that have stood the test of time to what's trending this year, plus our own grown-up section, shop online in our unique toy store!"
     },
     "interfaceColours": {
       "primary": 0,
@@ -594,6 +692,7 @@ const patternManifest_1523539152082 = {
       "sizeLargeLocal": "logo.svg"
     },
     "patterns": [
+      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/badges",
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/banners",
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons",
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards",
@@ -602,9 +701,35 @@ const patternManifest_1523539152082 = {
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/header",
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections"
     ],
-    "pages": []
+    "pages": [],
+    "js": []
   },
   "userPatterns": [
+    {
+      "name": "badges",
+      "namePretty": "Badges",
+      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/badges",
+      "html": [
+        {
+          "name": "sale-tab",
+          "namePretty": "Sale tab",
+          "filename": "sale-tab",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/badges/sale-tab.html",
+          "localPath": "patterns/badges/sale-tab.html"
+        }
+      ],
+      "md": [],
+      "css": [
+        {
+          "name": "sale-tab",
+          "namePretty": "Sale tab",
+          "filename": "sale-tab",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/badges/sale-tab.css",
+          "localPath": "patterns/badges/sale-tab.css"
+        }
+      ],
+      "js": []
+    },
     {
       "name": "banners",
       "namePretty": "Banners",
@@ -613,6 +738,7 @@ const patternManifest_1523539152082 = {
         {
           "name": "main-banner",
           "namePretty": "Main banner",
+          "filename": "main-banner",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/banners/main-banner.html",
           "localPath": "patterns/banners/main-banner.html"
         }
@@ -622,10 +748,12 @@ const patternManifest_1523539152082 = {
         {
           "name": "main-banner",
           "namePretty": "Main banner",
+          "filename": "main-banner",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/banners/main-banner.css",
           "localPath": "patterns/banners/main-banner.css"
         }
-      ]
+      ],
+      "js": []
     },
     {
       "name": "buttons",
@@ -635,20 +763,16 @@ const patternManifest_1523539152082 = {
         {
           "name": "buttons",
           "namePretty": "Buttons",
+          "filename": "buttons",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons/buttons.html",
           "localPath": "patterns/buttons/buttons.html"
-        },
-        {
-          "name": "sale-tab",
-          "namePretty": "Sale tab",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons/sale-tab.html",
-          "localPath": "patterns/buttons/sale-tab.html"
         }
       ],
       "md": [
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons/README.md",
           "localPath": "patterns/buttons/README.md"
         }
@@ -657,16 +781,12 @@ const patternManifest_1523539152082 = {
         {
           "name": "buttons",
           "namePretty": "Buttons",
+          "filename": "buttons",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons/buttons.css",
           "localPath": "patterns/buttons/buttons.css"
-        },
-        {
-          "name": "sale-tab",
-          "namePretty": "Sale tab",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons/sale-tab.css",
-          "localPath": "patterns/buttons/sale-tab.css"
         }
-      ]
+      ],
+      "js": []
     },
     {
       "name": "cards",
@@ -676,18 +796,21 @@ const patternManifest_1523539152082 = {
         {
           "name": "main-card",
           "namePretty": "Main card",
+          "filename": "main-card",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/main-card.html",
           "localPath": "patterns/cards/main-card.html"
         },
         {
           "name": "product-card",
           "namePretty": "Product card",
+          "filename": "product-card",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/product-card.html",
           "localPath": "patterns/cards/product-card.html"
         },
         {
           "name": "sale-card",
           "namePretty": "Sale card",
+          "filename": "sale-card",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/sale-card.html",
           "localPath": "patterns/cards/sale-card.html"
         }
@@ -697,16 +820,19 @@ const patternManifest_1523539152082 = {
         {
           "name": "main-card",
           "namePretty": "Main card",
+          "filename": "main-card",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/main-card.css",
           "localPath": "patterns/cards/main-card.css"
         },
         {
           "name": "sale-card",
           "namePretty": "Sale card",
+          "filename": "sale-card",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/sale-card.css",
           "localPath": "patterns/cards/sale-card.css"
         }
-      ]
+      ],
+      "js": []
     },
     {
       "name": "footer",
@@ -716,6 +842,7 @@ const patternManifest_1523539152082 = {
         {
           "name": "footer",
           "namePretty": "Footer",
+          "filename": "footer",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/footer/footer.html",
           "localPath": "patterns/footer/footer.html"
         }
@@ -725,10 +852,12 @@ const patternManifest_1523539152082 = {
         {
           "name": "footer",
           "namePretty": "Footer",
+          "filename": "footer",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/footer/footer.css",
           "localPath": "patterns/footer/footer.css"
         }
-      ]
+      ],
+      "js": []
     },
     {
       "name": "forms",
@@ -738,18 +867,21 @@ const patternManifest_1523539152082 = {
         {
           "name": "contact-form",
           "namePretty": "Contact form",
+          "filename": "contact-form",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/contact-form.html",
           "localPath": "patterns/forms/contact-form.html"
         },
         {
           "name": "item-quanity",
           "namePretty": "Item quanity",
+          "filename": "item-quanity",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/item-quanity.html",
           "localPath": "patterns/forms/item-quanity.html"
         },
         {
           "name": "newsletter",
           "namePretty": "Newsletter",
+          "filename": "newsletter",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/newsletter.html",
           "localPath": "patterns/forms/newsletter.html"
         }
@@ -758,6 +890,7 @@ const patternManifest_1523539152082 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/README.md",
           "localPath": "patterns/forms/README.md"
         }
@@ -766,10 +899,12 @@ const patternManifest_1523539152082 = {
         {
           "name": "forms",
           "namePretty": "Forms",
+          "filename": "forms",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/forms.css",
           "localPath": "patterns/forms/forms.css"
         }
-      ]
+      ],
+      "js": []
     },
     {
       "name": "header",
@@ -779,6 +914,7 @@ const patternManifest_1523539152082 = {
         {
           "name": "header",
           "namePretty": "Header",
+          "filename": "header",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/header/header.html",
           "localPath": "patterns/header/header.html"
         }
@@ -788,10 +924,12 @@ const patternManifest_1523539152082 = {
         {
           "name": "header",
           "namePretty": "Header",
+          "filename": "header",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/header/header.css",
           "localPath": "patterns/header/header.css"
         }
-      ]
+      ],
+      "js": []
     },
     {
       "name": "sections",
@@ -801,18 +939,21 @@ const patternManifest_1523539152082 = {
         {
           "name": "link-section",
           "namePretty": "Link section",
+          "filename": "link-section",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections/link-section.html",
           "localPath": "patterns/sections/link-section.html"
         },
         {
           "name": "product-section",
           "namePretty": "Product section",
+          "filename": "product-section",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections/product-section.html",
           "localPath": "patterns/sections/product-section.html"
         },
         {
           "name": "section",
           "namePretty": "Section",
+          "filename": "section",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections/section.html",
           "localPath": "patterns/sections/section.html"
         }
@@ -822,10 +963,12 @@ const patternManifest_1523539152082 = {
         {
           "name": "section",
           "namePretty": "Section",
+          "filename": "section",
           "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections/section.css",
           "localPath": "patterns/sections/section.css"
         }
-      ]
+      ],
+      "js": []
     }
   ],
   "config": {
@@ -848,5 +991,5 @@ const patternManifest_1523539152082 = {
   }
 };
 
-patternBotIncludes(patternManifest_1523539152082);
+patternBotIncludes(patternManifest_6bd776e458b9c2604d39f98788b51641685e30ca);
 }());
