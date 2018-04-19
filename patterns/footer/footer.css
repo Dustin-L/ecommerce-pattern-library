@@ -23,3 +23,7 @@ a {
 p {
   color: var(--color-accent-3);
 }
+
+.footer-text {
+  color: #fff;
+}

@@ -44,15 +44,11 @@
   width: 100%;
 }
 
-h2 {
+.h-2 {
   color: var(--color-accent-2);
   margin: 0;
 }
 
-div {
-  color: #fff;
-  background-color: #fff;
-}
 
 .product-box {
   display: block;
@@ -124,11 +120,11 @@ div {
    transform: translate(-50%, -50%);
  }
 
- h2 {
+ .h-2 {
    color: var(--color-accent-2);
  }
 
- div {
+ .d-iv {
    color: #fff;
    background-color: #fff;
  }

@@ -19,7 +19,6 @@ html {
 
 h1 {
   font-family: var(--font-primary);
-  color: var(--color-primary);
   font-weight: 500;
 }
 
@@ -30,13 +29,11 @@ h2 {
 
 h3 {
   font-family: var(--font-primary);
-  color: var(--color-primary);
   font-weight: 500;
 }
 
 a {
   font-family: var(--font-primary);
-  color: var(--color-primary);
   text-decoration: none;
 }
 
