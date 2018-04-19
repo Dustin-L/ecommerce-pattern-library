@@ -444,9 +444,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library
- * @version 6bd776e458b9c2604d39f98788b51641685e30ca
+ * @version 561f5b4de26a652433c45c893589fca7353349f3
  */
-const patternManifest_6bd776e458b9c2604d39f98788b51641685e30ca = {
+const patternManifest_561f5b4de26a652433c45c893589fca7353349f3 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -701,7 +701,28 @@ const patternManifest_6bd776e458b9c2604d39f98788b51641685e30ca = {
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/header",
       "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections"
     ],
-    "pages": [],
+    "pages": [
+      {
+        "name": "checkout.html",
+        "namePretty": "Checkout",
+        "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/pages/checkout.html"
+      },
+      {
+        "name": "home.html",
+        "namePretty": "Home",
+        "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/pages/home.html"
+      },
+      {
+        "name": "product-detail.html",
+        "namePretty": "Product detail",
+        "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/pages/product-detail.html"
+      },
+      {
+        "name": "product-list.html",
+        "namePretty": "Product list",
+        "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/pages/product-list.html"
+      }
+    ],
     "js": []
   },
   "userPatterns": [
@@ -991,5 +1012,5 @@ const patternManifest_6bd776e458b9c2604d39f98788b51641685e30ca = {
   }
 };
 
-patternBotIncludes(patternManifest_6bd776e458b9c2604d39f98788b51641685e30ca);
+patternBotIncludes(patternManifest_561f5b4de26a652433c45c893589fca7353349f3);
 }());
