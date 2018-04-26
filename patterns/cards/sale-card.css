@@ -79,7 +79,6 @@ p {
     display: block;
     overflow: hidden;
     position: relative;
-    max-width: 400px;
     border-bottom: 1px solid var(--color-accent-4);
     border-right: 1px solid var(--color-accent-4);
     width: 100%;
