@@ -42,7 +42,7 @@ p {
 }
 
 ul, ol, dl {
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
 }
 
 mark {

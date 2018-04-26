@@ -444,9 +444,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library
- * @version 561f5b4de26a652433c45c893589fca7353349f3
+ * @version 19a41ce2c7810858d82580ecc19dadeaccdbb4c8
  */
-const patternManifest_561f5b4de26a652433c45c893589fca7353349f3 = {
+const patternManifest_19a41ce2c7810858d82580ecc19dadeaccdbb4c8 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -732,6 +732,13 @@ const patternManifest_561f5b4de26a652433c45c893589fca7353349f3 = {
       "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/badges",
       "html": [
         {
+          "name": "page-nav",
+          "namePretty": "Page nav",
+          "filename": "page-nav",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/badges/page-nav.html",
+          "localPath": "patterns/badges/page-nav.html"
+        },
+        {
           "name": "sale-tab",
           "namePretty": "Sale tab",
           "filename": "sale-tab",
@@ -741,6 +748,13 @@ const patternManifest_561f5b4de26a652433c45c893589fca7353349f3 = {
       ],
       "md": [],
       "css": [
+        {
+          "name": "page-nav",
+          "namePretty": "Page nav",
+          "filename": "page-nav",
+          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/badges/page-nav.css",
+          "localPath": "patterns/badges/page-nav.css"
+        },
         {
           "name": "sale-tab",
           "namePretty": "Sale tab",
@@ -1012,5 +1026,5 @@ const patternManifest_561f5b4de26a652433c45c893589fca7353349f3 = {
   }
 };
 
-patternBotIncludes(patternManifest_561f5b4de26a652433c45c893589fca7353349f3);
+patternBotIncludes(patternManifest_19a41ce2c7810858d82580ecc19dadeaccdbb4c8);
 }());
