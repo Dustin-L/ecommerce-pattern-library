@@ -443,10 +443,10 @@ const patternBotIncludes = function (manifest) {
 
 /** 
  * Patternbot library manifest
- * /Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library
- * @version 889d21efb7c77bae141dc7267b10e79bc1c94ee8
+ * /Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2
+ * @version e94891c2eb2783008512559cbc59e3a71ff5d033
  */
-const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
+const patternManifest_e94891c2eb2783008512559cbc59e3a71ff5d033 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -520,23 +520,23 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           {
             "name": "--color-primary",
             "namePretty": "Primary",
-            "raw": "#eb4f91",
-            "hex": "#eb4f91",
-            "rgba": "rgba(235, 79, 145, 1)"
+            "raw": "#008cff",
+            "hex": "#008cff",
+            "rgba": "rgba(0, 140, 255, 1)"
           },
           {
             "name": "--color-primary-dark",
             "namePretty": "Primary dark",
-            "raw": "#bc4882",
-            "hex": "#bc4882",
-            "rgba": "rgba(188, 72, 130, 1)"
+            "raw": "#0075d6",
+            "hex": "#0075d6",
+            "rgba": "rgba(0, 117, 214, 1)"
           },
           {
             "name": "--color-primary-light",
             "namePretty": "Primary light",
-            "raw": "#ff2861",
-            "hex": "#ff2861",
-            "rgba": "rgba(255, 40, 97, 1)"
+            "raw": "#008cff",
+            "hex": "#008cff",
+            "rgba": "rgba(0, 140, 255, 1)"
           }
         ],
         "secondary": [
@@ -637,9 +637,9 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
         "accent": []
       },
       "coloursRaw": {
-        "--color-primary": "#eb4f91",
-        "--color-primary-dark": "#bc4882",
-        "--color-primary-light": "#ff2861",
+        "--color-primary": "#008cff",
+        "--color-primary-dark": "#0075d6",
+        "--color-primary-light": "#008cff",
         "--color-secondary": "#2d7aa3",
         "--color-secondary-dark": "#00355a",
         "--color-secondary-light": "#00aae3",
@@ -655,7 +655,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
     },
     "readme": {
       "attributes": {
-        "name": "NIXNAX",
+        "name": "Portfolio",
         "fontUrl": "https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Quicksand:300,400,700",
         "backgroundColour": "#fff",
         "interfaceColours": {
@@ -663,8 +663,8 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "opposite": 255
         }
       },
-      "bodyRaw": "\nFrom classic toys that have stood the test of time to what's trending this year, plus our own grown-up section, shop online in our unique toy store!\n",
-      "bodyBasic": "From classic toys that have stood the test of time to what's trending this year, plus our own grown-up section, shop online in our unique toy store!"
+      "bodyRaw": "\nThis is the official portfolio website for Graphic designer Dustin Langman.\n",
+      "bodyBasic": "This is the official portfolio website for Graphic designer Dustin Langman."
     },
     "interfaceColours": {
       "primary": 0,
@@ -673,54 +673,53 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
   },
   "patternLibFiles": {
     "commonParsable": {
-      "gridifier": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/common/grid.css",
-      "typografier": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/common/type.css",
-      "modulifier": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/common/modules.css",
-      "theme": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/common/theme.css"
+      "gridifier": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/common/grid.css",
+      "typografier": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/common/type.css",
+      "modulifier": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/common/modules.css",
+      "theme": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/common/theme.css"
     },
     "imagesParsable": {
       "icons": false
     },
     "logos": {
-      "sizeLarge": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/images/logo.svg",
-      "size64": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/images/logo-64.svg",
-      "size32": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/images/logo-32.svg",
-      "size16": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/images/logo-16.svg",
-      "size16Local": "logo-16.svg",
+      "sizeLarge": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/images/logo.svg",
+      "size64": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/images/logo-64.svg",
+      "size32": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/images/logo-32.svg",
+      "size16": false,
       "size32Local": "logo-32.svg",
       "size64Local": "logo-64.svg",
       "sizeLargeLocal": "logo.svg"
     },
     "patterns": [
-      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/additional",
-      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/banners",
-      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons",
-      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards",
-      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/footer",
-      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms",
-      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/header",
-      "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections"
+      "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/additional",
+      "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/banners",
+      "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/buttons",
+      "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/cards",
+      "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/footer",
+      "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/forms",
+      "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/header",
+      "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/sections"
     ],
     "pages": [
       {
         "name": "checkout.html",
         "namePretty": "Checkout",
-        "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/pages/checkout.html"
+        "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/pages/checkout.html"
       },
       {
         "name": "home.html",
         "namePretty": "Home",
-        "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/pages/home.html"
+        "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/pages/home.html"
       },
       {
         "name": "item-detail.html",
         "namePretty": "Item detail",
-        "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/pages/item-detail.html"
+        "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/pages/item-detail.html"
       },
       {
         "name": "product-list.html",
         "namePretty": "Product list",
-        "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/pages/product-list.html"
+        "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/pages/product-list.html"
       }
     ],
     "js": []
@@ -729,13 +728,13 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
     {
       "name": "additional",
       "namePretty": "Additional",
-      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/additional",
+      "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/additional",
       "html": [
         {
           "name": "page-nav",
           "namePretty": "Page nav",
           "filename": "page-nav",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/additional/page-nav.html",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/additional/page-nav.html",
           "localPath": "patterns/additional/page-nav.html",
           "readme": {}
         },
@@ -743,7 +742,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "sale-tab",
           "namePretty": "Sale tab",
           "filename": "sale-tab",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/additional/sale-tab.html",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/additional/sale-tab.html",
           "localPath": "patterns/additional/sale-tab.html",
           "readme": {}
         }
@@ -753,7 +752,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "readme",
           "namePretty": "Readme",
           "filename": "README",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/additional/README.md",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/additional/README.md",
           "localPath": "patterns/additional/README.md"
         }
       ],
@@ -762,14 +761,14 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "page-nav",
           "namePretty": "Page nav",
           "filename": "page-nav",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/additional/page-nav.css",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/additional/page-nav.css",
           "localPath": "patterns/additional/page-nav.css"
         },
         {
           "name": "sale-tab",
           "namePretty": "Sale tab",
           "filename": "sale-tab",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/additional/sale-tab.css",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/additional/sale-tab.css",
           "localPath": "patterns/additional/sale-tab.css"
         }
       ],
@@ -778,13 +777,13 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
     {
       "name": "banners",
       "namePretty": "Banners",
-      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/banners",
+      "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/banners",
       "html": [
         {
           "name": "main-banner",
           "namePretty": "Main banner",
           "filename": "main-banner",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/banners/main-banner.html",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/banners/main-banner.html",
           "localPath": "patterns/banners/main-banner.html"
         }
       ],
@@ -793,7 +792,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "readme",
           "namePretty": "Readme",
           "filename": "README",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/banners/README.md",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/banners/README.md",
           "localPath": "patterns/banners/README.md"
         }
       ],
@@ -802,7 +801,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "main-banner",
           "namePretty": "Main banner",
           "filename": "main-banner",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/banners/main-banner.css",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/banners/main-banner.css",
           "localPath": "patterns/banners/main-banner.css"
         }
       ],
@@ -811,13 +810,13 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
     {
       "name": "buttons",
       "namePretty": "Buttons",
-      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons",
+      "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/buttons",
       "html": [
         {
           "name": "buttons",
           "namePretty": "Buttons",
           "filename": "buttons",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons/buttons.html",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/buttons/buttons.html",
           "localPath": "patterns/buttons/buttons.html"
         }
       ],
@@ -826,7 +825,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "readme",
           "namePretty": "Readme",
           "filename": "README",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons/README.md",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/buttons/README.md",
           "localPath": "patterns/buttons/README.md"
         }
       ],
@@ -835,7 +834,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "buttons",
           "namePretty": "Buttons",
           "filename": "buttons",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/buttons/buttons.css",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/buttons/buttons.css",
           "localPath": "patterns/buttons/buttons.css"
         }
       ],
@@ -844,30 +843,30 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
     {
       "name": "cards",
       "namePretty": "Cards",
-      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards",
+      "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/cards",
       "html": [
         {
           "name": "main-card",
           "namePretty": "Main card",
           "filename": "main-card",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/main-card.html",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/cards/main-card.html",
           "localPath": "patterns/cards/main-card.html",
+          "readme": {}
+        },
+        {
+          "name": "new-card",
+          "namePretty": "New card",
+          "filename": "new-card",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/cards/new-card.html",
+          "localPath": "patterns/cards/new-card.html",
           "readme": {}
         },
         {
           "name": "product-card",
           "namePretty": "Product card",
           "filename": "product-card",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/product-card.html",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/cards/product-card.html",
           "localPath": "patterns/cards/product-card.html",
-          "readme": {}
-        },
-        {
-          "name": "sale-card",
-          "namePretty": "Sale card",
-          "filename": "sale-card",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/sale-card.html",
-          "localPath": "patterns/cards/sale-card.html",
           "readme": {}
         }
       ],
@@ -876,7 +875,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "readme",
           "namePretty": "Readme",
           "filename": "README",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/README.md",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/cards/README.md",
           "localPath": "patterns/cards/README.md"
         }
       ],
@@ -885,15 +884,15 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "main-card",
           "namePretty": "Main card",
           "filename": "main-card",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/main-card.css",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/cards/main-card.css",
           "localPath": "patterns/cards/main-card.css"
         },
         {
-          "name": "sale-card",
-          "namePretty": "Sale card",
-          "filename": "sale-card",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/cards/sale-card.css",
-          "localPath": "patterns/cards/sale-card.css"
+          "name": "new-card",
+          "namePretty": "New card",
+          "filename": "new-card",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/cards/new-card.css",
+          "localPath": "patterns/cards/new-card.css"
         }
       ],
       "js": []
@@ -901,13 +900,13 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
     {
       "name": "footer",
       "namePretty": "Footer",
-      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/footer",
+      "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/footer",
       "html": [
         {
           "name": "footer",
           "namePretty": "Footer",
           "filename": "footer",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/footer/footer.html",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/footer/footer.html",
           "localPath": "patterns/footer/footer.html"
         }
       ],
@@ -916,7 +915,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "readme",
           "namePretty": "Readme",
           "filename": "README",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/footer/README.md",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/footer/README.md",
           "localPath": "patterns/footer/README.md"
         }
       ],
@@ -925,7 +924,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "footer",
           "namePretty": "Footer",
           "filename": "footer",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/footer/footer.css",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/footer/footer.css",
           "localPath": "patterns/footer/footer.css"
         }
       ],
@@ -934,13 +933,13 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
     {
       "name": "forms",
       "namePretty": "Forms",
-      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms",
+      "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/forms",
       "html": [
         {
           "name": "contact-form",
           "namePretty": "Contact form",
           "filename": "contact-form",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/contact-form.html",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/forms/contact-form.html",
           "localPath": "patterns/forms/contact-form.html",
           "readme": {}
         },
@@ -948,7 +947,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "item-quantity",
           "namePretty": "Item quantity",
           "filename": "item-quantity",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/item-quantity.html",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/forms/item-quantity.html",
           "localPath": "patterns/forms/item-quantity.html",
           "readme": {}
         },
@@ -956,7 +955,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "newsletter",
           "namePretty": "Newsletter",
           "filename": "newsletter",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/newsletter.html",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/forms/newsletter.html",
           "localPath": "patterns/forms/newsletter.html",
           "readme": {}
         }
@@ -966,7 +965,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "readme",
           "namePretty": "Readme",
           "filename": "README",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/README.md",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/forms/README.md",
           "localPath": "patterns/forms/README.md"
         }
       ],
@@ -975,7 +974,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "forms",
           "namePretty": "Forms",
           "filename": "forms",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/forms/forms.css",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/forms/forms.css",
           "localPath": "patterns/forms/forms.css"
         }
       ],
@@ -984,13 +983,13 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
     {
       "name": "header",
       "namePretty": "Header",
-      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/header",
+      "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/header",
       "html": [
         {
           "name": "header",
           "namePretty": "Header",
           "filename": "header",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/header/header.html",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/header/header.html",
           "localPath": "patterns/header/header.html"
         }
       ],
@@ -999,7 +998,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "readme",
           "namePretty": "Readme",
           "filename": "README",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/header/README.md",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/header/README.md",
           "localPath": "patterns/header/README.md"
         }
       ],
@@ -1008,7 +1007,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "header",
           "namePretty": "Header",
           "filename": "header",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/header/header.css",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/header/header.css",
           "localPath": "patterns/header/header.css"
         }
       ],
@@ -1017,13 +1016,13 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
     {
       "name": "sections",
       "namePretty": "Sections",
-      "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections",
+      "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/sections",
       "html": [
         {
           "name": "link-section",
           "namePretty": "Link section",
           "filename": "link-section",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections/link-section.html",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/sections/link-section.html",
           "localPath": "patterns/sections/link-section.html",
           "readme": {}
         },
@@ -1031,7 +1030,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "product-section",
           "namePretty": "Product section",
           "filename": "product-section",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections/product-section.html",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/sections/product-section.html",
           "localPath": "patterns/sections/product-section.html",
           "readme": {}
         },
@@ -1039,7 +1038,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "section",
           "namePretty": "Section",
           "filename": "section",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections/section.html",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/sections/section.html",
           "localPath": "patterns/sections/section.html",
           "readme": {}
         }
@@ -1049,7 +1048,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "readme",
           "namePretty": "Readme",
           "filename": "README",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections/README.md",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/sections/README.md",
           "localPath": "patterns/sections/README.md"
         }
       ],
@@ -1058,7 +1057,7 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
           "name": "section",
           "namePretty": "Section",
           "filename": "section",
-          "path": "/Users/dustinlangman/Documents/Semester 4/Web Dev 04/ecommerce-pattern-library/patterns/sections/section.css",
+          "path": "/Users/dustinlangman/Documents/Semester 5/Web Development 5/portfolio2/patterns/sections/section.css",
           "localPath": "patterns/sections/section.css"
         }
       ],
@@ -1085,5 +1084,5 @@ const patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8 = {
   }
 };
 
-patternBotIncludes(patternManifest_889d21efb7c77bae141dc7267b10e79bc1c94ee8);
+patternBotIncludes(patternManifest_e94891c2eb2783008512559cbc59e3a71ff5d033);
 }());
